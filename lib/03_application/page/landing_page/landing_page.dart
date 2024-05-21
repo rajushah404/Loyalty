@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/page/landing_page/widgets/appbar_title.dart';
+import 'package:loyalty_system/03_application/page/landing_page/widgets/custom_text_button.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -20,8 +21,22 @@ class LandingPage extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(8),
                           bottomRight: Radius.circular(8))),
-                  child: const Row(
-                    children: [],
+                  child: Row(
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset("assets/images/test.png"),
+                          CustomTextButton(
+                            text: 'Loyalti App',
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.arrow_drop_down_sharp,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
               ),
