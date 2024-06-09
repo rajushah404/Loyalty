@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/core/app_color.dart';
+import 'package:loyalty_system/screen_size.dart';
 
 class FooterSection extends StatelessWidget {
   const FooterSection({super.key});
@@ -11,10 +12,11 @@ class FooterSection extends StatelessWidget {
     return Container(
       height: heigth,
       width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       color: AppColor.primary,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth > 600) {
+          if (isLargeScreen(context)) {
             // Desktop layout
             return const Column(
               crossAxisAlignment: CrossAxisAlignment.start,

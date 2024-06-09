@@ -27,7 +27,7 @@ class Discription extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Stamp Me is a modern, tech-savvy approach to traditional stamp card programs, blending convenience, accessibility, and enhanced engagement with your loyal customers.',
+                'Loyalty System is a modern, tech-savvy approach to traditional stamp card programs, blending convenience, accessibility, and enhanced engagement with your loyal customers.',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white,
