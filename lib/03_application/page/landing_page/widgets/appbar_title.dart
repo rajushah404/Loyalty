@@ -11,10 +11,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            "Get 10 Members in your 30 day free trial to earn an extra FREE MONTH!",
-            style: TextStyle(fontSize: 18),
-            overflow: TextOverflow.ellipsis,
+          const Flexible(
+            child: Text(
+              "Get 10 Members in your 30 day free trial to earn an extra FREE MONTH!",
+              style: TextStyle(fontSize: 18),
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
           TextButton(
             onPressed: () {},
