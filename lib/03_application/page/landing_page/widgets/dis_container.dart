@@ -14,7 +14,6 @@ class Discription extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
                 'Punch cards, taken to digital heights.',
@@ -44,6 +43,7 @@ class Discription extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 15),
+                  minimumSize: const Size(250, 50),
                 ),
                 child: const Text(
                   'Get Started for Free',

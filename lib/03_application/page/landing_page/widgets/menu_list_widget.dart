@@ -3,6 +3,7 @@ import 'package:loyalty_system/03_application/page/landing_page/widgets/custom_t
 
 import '../../../../screen_size.dart';
 import '../../../core/app_color.dart';
+import '../../login_page/login_page.dart';
 
 class MenuListWidget extends StatelessWidget {
   const MenuListWidget({
@@ -69,7 +70,13 @@ class MenuListWidget extends StatelessWidget {
                     fontSize: 16,
                     color: AppColor.darkText,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(width: 8),
                 ElevatedButton(

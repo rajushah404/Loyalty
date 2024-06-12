@@ -18,9 +18,13 @@ class LandingPage extends StatelessWidget {
         return Scaffold(
           backgroundColor: AppColor.lightBackground,
           appBar: const CustomAppBar(),
-          body: SingleChildScrollView(
-            child: const Column(
-              children: [MenuListWidget(), Discription(), FooterSection()],
+          body: const SingleChildScrollView(
+            child: Column(
+              children: [
+                MenuListWidget(),
+                Discription(),
+                FooterInformationPage()
+              ],
             ),
           ),
           drawer: isMobileScreen(context) ? const DrawerWidger() : null,
