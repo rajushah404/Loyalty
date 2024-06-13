@@ -16,9 +16,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:
-          // LoginPage(),
-          const LandingPage(),
+      home: const LoginPage(),
+      // const LandingPage(),
       debugShowCheckedModeBanner: false,
     );
   }
