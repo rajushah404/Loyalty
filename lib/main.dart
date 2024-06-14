@@ -16,9 +16,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
-      // const LandingPage(),
+      home:
+
+          //const LoginPage(),
+          const LandingPage(),
       debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        '/root': (BuildContext context) => const LandingPage(),
+        '/signIn': (BuildContext context) => const LoginPage(),
+      },
     );
   }
 }

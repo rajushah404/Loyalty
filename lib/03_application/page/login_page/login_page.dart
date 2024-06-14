@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/core/app_color.dart';
+import 'package:loyalty_system/03_application/page/login_page/widgets/sign_in_botton.dart';
+import 'package:loyalty_system/03_application/page/login_page/widgets/text_widget.dart';
 
 import '../../../screen_size.dart';
 import '../../core/custom_text_form_field.dart';
@@ -89,11 +91,8 @@ class LoginPage extends StatelessWidget {
                                   children: [
                                     const Row(
                                       children: [
-                                        Text(
-                                          "Username",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w700),
+                                        CustomText(
+                                          text: 'Username',
                                         ),
                                       ],
                                     ),
@@ -106,11 +105,8 @@ class LoginPage extends StatelessWidget {
                                     ),
                                     const Row(
                                       children: [
-                                        Text(
-                                          'Password',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w700),
+                                        CustomText(
+                                          text: 'Password',
                                         ),
                                       ],
                                     ),
@@ -120,27 +116,7 @@ class LoginPage extends StatelessWidget {
                                     const SizedBox(
                                       height: 25,
                                     ),
-                                    ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        foregroundColor: AppColor.lightText,
-                                        backgroundColor: AppColor.darkText,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 15),
-                                        minimumSize: const Size(300, 50),
-                                      ),
-                                      child: const Text(
-                                        'Sign In',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
+                                    const SignInBotton(),
                                     const SizedBox(
                                       height: 25,
                                     ),
@@ -149,10 +125,11 @@ class LoginPage extends StatelessWidget {
                                       child: const Text(
                                         "Forgot Password ?",
                                         style: TextStyle(
-                                            color: AppColor.appbar,
-                                            fontSize: 16,
-                                            letterSpacing: 1.5,
-                                            fontWeight: FontWeight.w500),
+                                          color: AppColor.appbar,
+                                          fontSize: 16,
+                                          letterSpacing: 1.5,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                     const SizedBox(
@@ -167,8 +144,14 @@ class LoginPage extends StatelessWidget {
                                           MainAxisAlignment.center,
                                       children: [
                                         const Flexible(
-                                            child:
-                                                Text("Don't have account ?")),
+                                          child: Text(
+                                            "Don't have account ?",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ),
                                         TextButton(
                                           onPressed: () {},
                                           child: const Text(
@@ -190,12 +173,12 @@ class LoginPage extends StatelessWidget {
                                     const Text(
                                       '© 2024 Loyalty System',
                                       style: TextStyle(
-                                          fontSize: 20,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold,
                                           letterSpacing: 1.5),
                                     ),
                                     const SizedBox(
-                                      height: 10,
+                                      height: 8,
                                     ),
                                     TextButton(
                                         onPressed: () {},
