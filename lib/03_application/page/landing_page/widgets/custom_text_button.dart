@@ -6,7 +6,6 @@ class CustomTextButton extends StatefulWidget {
   final VoidCallback onPressed;
   final TextStyle? textStyle;
   final Color? buttonColor;
-  final Icon? icon;
   final bool enableHover;
 
   const CustomTextButton({
@@ -15,7 +14,6 @@ class CustomTextButton extends StatefulWidget {
     required this.onPressed,
     this.textStyle,
     this.buttonColor,
-    this.icon,
     this.enableHover = false,
   });
 
@@ -45,30 +43,23 @@ class _CustomTextButtonState extends State<CustomTextButton> {
       },
       child: TextButton(
         onPressed: widget.onPressed,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              widget.text,
-              style: widget.textStyle?.copyWith(
-                    decoration: _isHovered
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
-                    decorationThickness: _isHovered ? 3.0 : null,
-                  ) ??
-                  TextStyle(
-                    color: AppColor.darkText,
-                    decoration: _isHovered
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
-                    decorationThickness: _isHovered ? 2.0 : null,
-                  ),
-            ),
-            if (widget.icon != null) ...[
-              const SizedBox(width: 5),
-              widget.icon!,
-            ]
-          ],
+        child: Flexible(
+          child: Text(
+            widget.text,
+            style: widget.textStyle?.copyWith(
+                  decoration: _isHovered
+                      ? TextDecoration.underline
+                      : TextDecoration.none,
+                  decorationThickness: _isHovered ? 3.0 : null,
+                ) ??
+                TextStyle(
+                  color: AppColor.darkText,
+                  decoration: _isHovered
+                      ? TextDecoration.underline
+                      : TextDecoration.none,
+                  decorationThickness: _isHovered ? 2.0 : null,
+                ),
+          ),
         ),
       ),
     );

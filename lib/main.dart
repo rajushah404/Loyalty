@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loyalty_system/03_application/page/landing_page/landing_page.dart';
+import 'package:loyalty_system/03_application/page/landing_page/home_page.dart';
 import 'package:loyalty_system/03_application/page/login_page/login_page.dart';
 
 void main() {
@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
       home:
 
           //const LoginPage(),
-          const LandingPage(),
+          const HomePage(),
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/root': (BuildContext context) => const LandingPage(),
+        '/root': (BuildContext context) => const HomePage(),
         '/signIn': (BuildContext context) => const LoginPage(),
       },
     );
