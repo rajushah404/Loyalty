@@ -16,44 +16,41 @@ class FeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
-      color: const Color.fromARGB(96, 51, 49, 49),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: const BorderSide(color: Color.fromARGB(96, 51, 49, 49)),
-      ),
-      child: Padding(
-        padding: isLargeScreen(context)
-            ? const EdgeInsets.all(16.0)
-            : const EdgeInsets.all(4),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(icon,
-                color: Colors.purple, size: isLargeScreen(context) ? 50 : 20),
-            const SizedBox(height: 10),
-            Flexible(
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: Colors.purple,
-                  fontWeight: FontWeight.bold,
-                  fontSize: isLargeScreen(context) ? 25 : 8,
+        color: const Color(0xFF2A2E43),
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(isLargeScreen(context) ? 18 : 5),
+          side: const BorderSide(color: Color.fromARGB(96, 51, 49, 49)),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(icon,
+                  color: Colors.purple, size: isLargeScreen(context) ? 50 : 35),
+              const SizedBox(height: 10),
+              Flexible(
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.purple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: isLargeScreen(context) ? 25 : 15,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Flexible(
-              child: Text(
-                description,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: isLargeScreen(context) ? 20 : 10),
+              const SizedBox(height: 10),
+              Flexible(
+                child: Text(
+                  description,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: isLargeScreen(context) ? 20 : 12),
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+            ],
+          ),
+        ));
   }
 }

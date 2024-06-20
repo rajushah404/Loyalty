@@ -18,12 +18,10 @@ class _AboutUsPageState extends State<AboutUsPage> {
       body: Padding(
         padding: const EdgeInsets.only(left: 50, right: 50, top: 50),
         child: Row(
-          crossAxisAlignment:
-              CrossAxisAlignment.start, // Added to align children to the start
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              // Added Expanded to handle different screen sizes better
               child: Column(
                 crossAxisAlignment: isLargeScreen(context)
                     ? CrossAxisAlignment.start

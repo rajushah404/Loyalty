@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loyalty_system/screen_size.dart';
 
 class AboutUsText extends StatelessWidget {
   final String text;
@@ -10,9 +11,9 @@ class AboutUsText extends StatelessWidget {
     return Flexible(
       child: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.w500,
-          fontSize: 13,
+          fontSize: isLargeScreen(context) ? 18 : 13,
           letterSpacing: 1.5,
           wordSpacing: 2,
         ),

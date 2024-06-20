@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/page/about_us/about_us.dart';
 import 'package:loyalty_system/03_application/page/about_us/widgets/cloud_info.dart';
 import 'package:loyalty_system/03_application/page/landing_page/home_page.dart';
-// import '../../../screen_size.dart';
-// import '../landing_page/widgets/drawer_widget.dart';
+import 'package:loyalty_system/03_application/page/pricing_page/pricing_page.dart';
+import 'package:loyalty_system/screen_size.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -19,34 +19,14 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: isMobileScreen(context)
-      //     ? AppBar(
-      //         elevation: 0,
-      //         automaticallyImplyLeading: false,
-      //         backgroundColor: const Color.fromARGB(255, 72, 111, 230),
-      //         actions: [
-      //           IconButton(
-      //             icon: const Icon(
-      //               Icons.menu,
-      //               color: Colors.black,
-      //             ),
-      //             onPressed: () {
-      //               _scaffoldKey.currentState?.openEndDrawer();
-      //             },
-      //           ),
-      //         ],
-      //       )
-      //     : null,
-      // key: _scaffoldKey,
-      // endDrawer: isMobileScreen(context) ? const DrawerWidger() : null,
-      // backgroundColor: Colors.blue,
       body: SingleChildScrollView(
         controller: _scrollController,
         child: Column(
           children: [
             _buildHomeSection(),
             _buildAboutUsSection(),
-            _buildCloudInfo()
+            _buildCloudInfo(),
+            _buildPricingPage()
           ],
         ),
       ),
@@ -68,9 +48,16 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Widget _buildCloudInfo() {
-    return const SizedBox(
-      height: 800,
-      child: CloudInfo(),
+    return SizedBox(
+      height: isLargeScreen(context) ? 700 : 600,
+      child: const CloudInfo(),
+    );
+  }
+
+  Widget _buildPricingPage() {
+    return SizedBox(
+      height: isLargeScreen(context) ? 800 : 600,
+      child: const PricingPage(),
     );
   }
 }
