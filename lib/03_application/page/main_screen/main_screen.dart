@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget _buildPricingPage() {
     return SizedBox(
-      height: isLargeScreen(context) ? 800 : 600,
+      height: isLargeScreen(context) ? 800 : 650,
       child: const PricingPage(),
     );
   }
