@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/page/landing_page/home_page.dart';
 import 'package:loyalty_system/03_application/page/login_page/login_page.dart';
+import 'package:loyalty_system/03_application/page/main_screen/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       home:
 
           //const LoginPage(),
-          const HomePage(),
+          const MainScreen(),
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/root': (BuildContext context) => const HomePage(),
