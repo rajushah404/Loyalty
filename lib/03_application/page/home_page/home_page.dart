@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:loyalty_system/03_application/page/landing_page/widgets/brand_logo.dart';
-import 'package:loyalty_system/03_application/page/landing_page/widgets/drawer_widget.dart';
-import 'package:loyalty_system/03_application/page/landing_page/widgets/home_info_page.dart';
-import 'package:loyalty_system/03_application/page/landing_page/widgets/top_menu.dart';
+import 'package:loyalty_system/03_application/page/home_page/widgets/brand_logo.dart';
+import 'package:loyalty_system/03_application/page/home_page/widgets/drawer_widget.dart';
+import 'package:loyalty_system/03_application/page/home_page/widgets/home_info_page.dart';
+import 'package:loyalty_system/03_application/page/home_page/widgets/top_menu.dart';
 import '../../../screen_size.dart';
 
 class HomePage extends StatefulWidget {

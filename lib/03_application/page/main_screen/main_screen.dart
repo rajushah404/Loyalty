@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/page/about_us/about_us.dart';
-import 'package:loyalty_system/03_application/page/about_us/widgets/cloud_info.dart';
-import 'package:loyalty_system/03_application/page/landing_page/home_page.dart';
+import 'package:loyalty_system/03_application/page/services/service_page.dart';
+import 'package:loyalty_system/03_application/page/home_page/home_page.dart';
 import 'package:loyalty_system/03_application/page/pricing_page/pricing_page.dart';
 import 'package:loyalty_system/screen_size.dart';
 
@@ -50,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget _buildCloudInfo() {
     return SizedBox(
       height: isLargeScreen(context) ? 700 : 600,
-      child: const CloudInfo(),
+      child: const ServicePage(),
     );
   }
 

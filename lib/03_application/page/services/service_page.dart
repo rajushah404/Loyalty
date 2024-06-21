@@ -2,24 +2,24 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:loyalty_system/03_application/core/app_color.dart';
 import 'package:loyalty_system/03_application/page/about_us/widgets/company_overview.dart';
-import 'package:loyalty_system/03_application/page/about_us/widgets/feature_card.dart';
+import 'package:loyalty_system/03_application/page/services/widgets/feature_card.dart';
 import 'package:loyalty_system/screen_size.dart';
 
-class CloudInfo extends StatefulWidget {
-  const CloudInfo({super.key});
+class ServicePage extends StatefulWidget {
+  const ServicePage({super.key});
 
   @override
-  State<CloudInfo> createState() => _CloudInfoState();
+  State<ServicePage> createState() => _ServicePageState();
 }
 
-class _CloudInfoState extends State<CloudInfo> {
+class _ServicePageState extends State<ServicePage> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
+        color: const Color(0xFF2A2E43).withOpacity(1),
         child: Padding(
           padding: const EdgeInsets.only(left: 50, right: 50, top: 50),
           child: Column(
